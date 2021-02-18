@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void sort(int[] array) {
@@ -7,13 +9,7 @@ public class Main {
         int max = array.length;
         thanosSort(array, min, max);
 
-        System.out.print("Массив отсортирован: {");
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i]);
-            if (i < array.length - 1)
-                System.out.print(",");
-        }
-        System.out.print("}");
+        System.out.println("Массив отсортирован: " + Arrays.toString(array));
     }
 
 
@@ -48,7 +44,7 @@ public class Main {
 
 
     public static void main(String[] args) {
-        int[] array = {7, -3, 0, 10, 1, 2, 3, 6, 99, 4, -2, 5};
+        int[] array = {7, 3, 0, 10, 1, 2, 3, 6, 99, 4, 2, 5, 98, 1000, 100100};
         sort(array);
     }
 }
